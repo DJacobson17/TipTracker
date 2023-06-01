@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gibsons Tipout Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <form action="" method="post" class="tips-form">
+    <h1>Gibsons Tipout Calculator</h1>
+    <div class="container">
+      <fieldset>
+        <legend>Tip Inputs</legend>
+      <div class="number-inputs">
+        <label for="tipsCc"><span>Charge Card Tips:</span></label><input type="number" inputmode="decimal" id="tipsCc" name="tipsCc" size="8"/><br>
+        <label for="tipsCash"><span>Cash Tips:</span></label><input type="number" inputmode="decimal" id="tipsCash" name="tipsCash" size="8"/><br>
+      </div>
+      </fieldset>
+      <fieldset>
+        <legend>Support Staff</legend>
+            <div class="options">
+                <div class="busser">
+                <label for="busserPer">Busser Tip Out:</label>
+                <span class="rangeResult"><output name="busser" id="busser" for="busserPer">20</output>%</span><br>
+                <input type="range" id="busserPer" name="busserPer" min="15" max="20" value="20" oninput="busser.value=busserPer.value">
+                </div>
+            </div>
+        </fieldset>
+    </div>
+    <button type="button" onclick="handleClick()">Submit</button>
+  </form>
+  <div id="results">
+    <p id="totaltips"> Total Tips = $ </p>
+    <p id="busserTipout">Busser Tipout = $ </p>
+    <p id="barTipout">Bartender Tipout = $ </p>
+    <p id="runnerTipout">Runner Tipout = $ </p>
+    <p id="netTips">Net Tips = $ </p>
+  </div>
+</body>
+</html>
