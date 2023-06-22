@@ -8,7 +8,7 @@
     const busserPercent = (parseInt(document.getElementById("busserPer").value)) / 100;
     let bartips;
     let runner;
-    let tipsTotal = (tipscc + tipscash);
+    let tipsTotal = +(tipscc + tipscash).toFixed(2);
     
     bartips =  Math.ceil(tipsTotal * 0.05);
     runner = Math.ceil(tipsTotal * 0.05);
