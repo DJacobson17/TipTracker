@@ -6,33 +6,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gibsons Tipout Calculator</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&display=swap" rel="stylesheet">
   <script src="script.js"></script>
 </head>
 <body>
+  <div class="card">
   <form action="" method="post" class="tips-form">
     <h1>Gibson's Tipout Calculator</h1>
-    <div class="container">
-      <fieldset>
-        <legend>Tip Inputs</legend>
+        <h2>Tip Inputs</h2>
       <div class="number-inputs">
-        <label for="tipsCc"><span>Charge Card Tips:</span></label><input type="number" inputmode="decimal" id="tipsCc" name="tipsCc" size="8"/><br>
+        <div class="inputBx">
+          <input type="number" inputmode="decimal" id="tipsCc" name="tipsCc" size="8" placeholder="Credit Card Tips" required="required">
+        </div>
         <br>
-        <label for="tipsCash"><span>Cash Tips:</span></label><input type="number" inputmode="decimal" id="tipsCash" name="tipsCash" size="8"/><br>
+        <div class="inputBx">
+          <input type="number" inputmode="decimal" id="tipsCash" name="tipsCash" size="8" placeholder="Cash Tips" required="required">
+        </div>
       </div>
-      </fieldset>
-      <fieldset>
-        <legend>Support Staff</legend>
+        <h2>Busser Tipout</h2>
             <div class="options">
                 <div class="busser">
-                <label for="busserPer">Busser Tip Out:</label>
-                <span class="rangeResult"><output name="busser" id="busser" for="busserPer">20</output>%</span><br>
-                <input type="range" id="busserPer" name="busserPer" min="15" max="20" value="20" oninput="busser.value=busserPer.value">
+                  <input type="range" id="busserPer" name="busserPer" min="15" max="20" value="18" oninput="busser.value=busserPer.value">
+                  <span class="rangeResult"><output name="busser" id="busser" for="busserPer">18</output>%</span><br>
                 </div>
             </div>
-        </fieldset>
+      <button type="button" onclick="handleClick()">Submit</button>
     </div>
-    <button type="button" onclick="handleClick()">Submit</button>
-  </form>
+
+    </form>
   <div id="results" >
     <p id="totaltips"> Total Tips = $ </p>
     <p id="busserTipout">Busser Tipout = $ </p>
@@ -40,5 +43,6 @@
     <p id="runnerTipout">Runner Tipout = $ </p>
     <p id="netTips">Net Tips = $ </p>
   </div>
+</div>
 </body>
 </html>
