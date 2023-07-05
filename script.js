@@ -20,12 +20,19 @@
     netTips = +netTips.toFixed(2);
     console.log(busserTips);
 
-    document.getElementById("totaltips").append(tipsTotal);
-    document.getElementById("barTipout").append(bartips);
-    document.getElementById("busserTipout").append(busserTips);
-    document.getElementById("runnerTipout").append(runner);
-    document.getElementById("netTips").append(netTips);
+    document.getElementById("totaltips").innerHTML = "";
+    document.getElementById("barTipout").innerHTML = "";
+    document.getElementById("busserTipout").innerHTML = "";
+    document.getElementById("runnerTipout").innerHTML = "";
+    document.getElementById("netTips").innerHTML = "";
+
+    document.getElementById("totaltips").append("Total Tips = $", tipsTotal);
+    document.getElementById("barTipout").append("Bartender Tipout = $", bartips);
+    document.getElementById("busserTipout").append("Busser Tipout = $", busserTips);
+    document.getElementById("runnerTipout").append("Runner Tipout = $", runner);
+    document.getElementById("netTips").append("Net Tips = $", netTips);
     document.getElementById("results").style.display="block";
+    window.location.href='#results';
 
       
     }

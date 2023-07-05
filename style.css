@@ -81,17 +81,17 @@ input[type=number] {
   width: 80%;
   outline: none;
   border: none;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.058);
   background: rgba(255, 255, 255, 0.2);
   padding: 8px 10px;
   padding-left: 40px;
   border-radius: 15px;
-  color: #fff;
-  font-size: 20px;
+  color: #060606;
+  font-size: 9vw;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 .rangeResult {
-  font-size: 2rem;
+  font-size: 10vw;
   display: inline-flex;
   padding-left: 3rem;
 }
@@ -163,27 +163,33 @@ input[type=radio]:checked + * {
 }
 
 button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1em;
-  width: 60%;
-  height: 70px;
-  font-family: 'Cormorant', serif;
-  font-size: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(222, 8, 8, 0.708);
-  padding: 8px 10px;
+  display: inline-block;
+  padding: 24px 32px;
+  border: 0;
+  width: 70vw;
+  text-decoration: none;
   border-radius: 15px;
-  color: #060606;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  background-color: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(30px);
+  color: rgba(220, 18, 18, 0.8);
+  font-size: 8vw;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: rgba(255,255,255,0.2);
 }
 
 #results {
   display: none;
+  ;
 }
 
 p {
   display: flex;
   justify-content: center;
+  font-size: 10vw;
 }
