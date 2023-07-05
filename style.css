@@ -80,7 +80,7 @@ input[type=number] {
 .rangeResult {
   font-size: 10vw;
   display: inline-flex;
-  padding-left: 3rem;
+  justify-content: center;
 }
 
 .busser {
