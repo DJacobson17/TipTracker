@@ -14,7 +14,7 @@
     runner = Math.ceil(tipsTotal * 0.05);
     console.log(bartips);
       
-    busserTips = +(tipsTotal * busserPercent).toFixed(2);
+    busserTips = Math.ceil(tipsTotal * busserPercent);
     totaltipout = bartips + busserTips + runner;
     netTips = tipsTotal - totaltipout;
     netTips = +netTips.toFixed(2);
