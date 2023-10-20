@@ -32,15 +32,27 @@
                   <span class="rangeResult"><output name="busser" id="busser" for="busserPer">18</output>%</span><br>
                 </div>
             </div>
+      <div class="pool">
+              <input type="checkbox"
+              id="switch"
+              class="checkbox" />
+               
+       <label for="switch"
+              class="toggle">
+           <p>
+                POOL  SOLO
+           </p>
+       </label>            
+      </div>
       <button type="button" onclick="handleClick()" >CALCULATE</button>
 
     </form>
   <h2 id="results" >
-    <p id="totaltips"></p>
-    <p id="busserTipout"></p>
-    <p id="barTipout"></p>
-    <p id="runnerTipout"></p>
-    <p id="netTips"></p>
+    <div class="result" id="totaltips"></p>
+    <div class="result" id="busserTipout"></p>
+    <div class="result" id="barTipout"></p>
+    <div class="result" id="runnerTipout"></p>
+    <div class="result" id="netTips"></p>
   </h2>
 </div>
 </body>
