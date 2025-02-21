@@ -1,60 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gibsons Tipout Calculator</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&display=swap" rel="stylesheet">
-  <script src="script.js"></script>
-</head>
-<body>
-  <div class="card">
-  <form action="" method="post" class="tips-form">
-    <h1>Gibson's Tipout Calculator</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gibsons Tipout Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="card">
+      <form action="" method="post" class="tips-form">
+        <h1>Gibson's Tipout Calculator</h1>
         <h2>Tip Inputs</h2>
-      <div class="number-inputs">
-        <div class="inputBx">
-          <input type="number" inputmode="decimal" id="tipsCc" name="tipsCc" size="8" placeholder="Credit Card Tips" required="required">
+        <div class="number-inputs">
+          <div class="inputBx">
+            <input
+              type="number"
+              inputmode="decimal"
+              id="tipsCc"
+              name="tipsCc"
+              size="8"
+              placeholder="Credit Card Tips"
+              required="required"
+            />
+          </div>
+          <br />
+          <div class="inputBx">
+            <input
+              type="number"
+              inputmode="decimal"
+              id="tipsCash"
+              name="tipsCash"
+              size="8"
+              placeholder="Cash Tips"
+              required="required"
+            />
+          </div>
         </div>
-        <br>
-        <div class="inputBx">
-          <input type="number" inputmode="decimal" id="tipsCash" name="tipsCash" size="8" placeholder="Cash Tips" required="required">
-        </div>
-      </div>
         <h2>Busser Tipout</h2>
-            <div class="options">
-                <div class="busser">
-                  <input type="range" id="busserPer" name="busserPer" min="15" max="25" value="20" oninput="busser.value=busserPer.value">
-                  <span class="rangeResult"><output name="busser" id="busser" for="busserPer">18</output>%</span><br>
-                </div>
-            </div>
-      <div class="pool">
-              <input type="checkbox"
-              id="switch"
-              class="checkbox" value="true" />
-               
-       <label for="switch"
-              class="toggle">
-           <p>
-                POOL  SOLO
-           </p>
-       </label>            
-      </div>
-      <button type="button" onclick="handleClick()" >CALCULATE</button>
+        <div class="options">
+          <div class="busser">
+            <input
+              type="range"
+              id="busserPer"
+              name="busserPer"
+              min="15"
+              max="25"
+              value="20"
+              oninput="busser.value=busserPer.value"
+            />
+            <span class="rangeResult"
+              ><output name="busser" id="busser" for="busserPer">20</output
+              >%</span
+            ><br />
+          </div>
+        </div>
+        <div class="pool">
+          <input type="checkbox" id="switch" class="checkbox" value="true" />
 
-    </form>
-  <h2 id="results" >
-    <div class="result" id="totaltips"></div>
-    <div class="result" id="busserTipout"></div>
-    <div class="result" id="barTipout"></div>
-    <div class="result" id="runnerTipout"></div>
-    <div class="result" id="partnerTipout"></div>
-    <div class="result" id="netTips"></div>
-  </h2>
-</div>
-</body>
+          <label for="switch" class="toggle">
+            <p>POOL SOLO</p>
+          </label>
+        </div>
+        <button type="button" onclick="handleClick()">CALCULATE</button>
+      </form>
+      <h2 id="results">
+        <div class="result" id="totaltips"></div>
+        <div class="result" id="busserTipout"></div>
+        <div class="result" id="barTipout"></div>
+        <div class="result" id="runnerTipout"></div>
+        <div class="result" id="partnerTipout"></div>
+        <div class="result" id="netTips"></div>
+      </h2>
+    </div>
+  </body>
 </html>
